@@ -5,7 +5,7 @@
  These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Prerequisites
-To run the game on your computer you must have:
+To run the app on your computer you must have:
 * Java Development Kit [Oracle Website](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 If you already have it just download the full repository and double click on the **Stock Exchange.jar**
