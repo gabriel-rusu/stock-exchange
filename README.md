@@ -17,7 +17,7 @@ If you already have it just download the full repository and double click on the
  ![appView](https://github.com/RusuGabriel/Stock-Exchange/blob/master/Resources/appView.png)
 
 ## Authors
-* [Rusu Gabriel](https://github.com/RusuGabriel) - Java GUI that display all the information in a meaningful way. 
+* [Rusu Gabriel](https://github.com/RusuGabriel) - Java GUI that displays all the information in a meaningful way. 
 * [Matei Roxana](https://github.com/Mrrrazzz) - Matlab scripts that generates some of the graphics shown in the application.
 * [Craioveanu Sergiu-Ionut]() - interpreting the data received from the Hackathon organiser **London Stock Exchange**.
 * [Paraschiva Mihai]() - Matlab scripts that generates some of the graphics shown in the application.
