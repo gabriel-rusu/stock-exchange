@@ -10,7 +10,7 @@ To run the app on your computer you must have:
 
 If you already have it just download the full repository and double click on the **Stock Exchange.jar**
  
- ## Screenshot
+ ## Screenshots
  ### Log in
  ![login](https://github.com/RusuGabriel/Stock-Exchange/blob/master/Resources/login.png)
  ### App View
