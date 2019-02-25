@@ -12,7 +12,7 @@ If you already have it just download the full repository and double click on the
  
  ## Screenshot
  
- ![alt text]()
+![login](https://github.com/RusuGabriel/Stock-Exchange/blob/master/Resources/login.png)
 
 ## Authors
 * [Rusu Gabriel](https://github.com/RusuGabriel) - Java GUI that display all the information in a meaningful way. 
