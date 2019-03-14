@@ -20,4 +20,4 @@ If you already have it just download the full repository and double click on the
 * [Rusu Gabriel](https://github.com/RusuGabriel) - Java GUI that displays all the information in a meaningful way. 
 * [Matei Roxana](https://github.com/Mrrrazzz) - Matlab scripts that generates some of the graphics shown in the application.
 * [Craioveanu Sergiu-Ionut](https://github.com/the-sergiu) - interpreting the data received from the Hackathon organiser **London Stock Exchange**.
-* [Paraschiva Mihai]() - Matlab scripts that generates some of the graphics shown in the application.
+* [Paraschiva Mihai](https://github.com/ParaschivaMihai) - Matlab scripts that generates some of the graphics shown in the application.
