@@ -12,9 +12,9 @@ If you already have it just download the full repository and double click on the
  
  ## Screenshots
  ### Log in
- ![login](https://github.com/RusuGabriel/Stock-Exchange/blob/master/Resources/login.png)
+ ![login](https://github.com/RusuGabriel/Stock-Exchange/blob/master/Resources/logIn.jpg)
  ### App View
- ![appView](https://github.com/RusuGabriel/Stock-Exchange/blob/master/Resources/appView.png)
+ ![appView](https://github.com/RusuGabriel/Stock-Exchange/blob/master/Resources/appView.jpg)
 
 ## Authors
 * [Rusu Gabriel](https://github.com/RusuGabriel) - Java GUI that displays all the information in a meaningful way. 
