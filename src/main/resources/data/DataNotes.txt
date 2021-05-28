@@ -1,0 +1,53 @@
+Data Notes
+==========
+The dataset is composed of closing index values from the FTSE Eurofirst 100 & 300 series.  It is composed of the 300 largest companies ranked by marked capitalisation with FTSE Developed Europe.  It has a number of sub-indices derived from it:
+    - Country
+    - Region:
+        * FTSEurofirst 300 Eurozone Index
+        * FTSEurofirst 300 ex-Eurozone Index
+        * FTSEurofirst 300 ex-Eurozone ex-UK Index
+        * FTSEurofirst 300 Supersector indices
+        * FTSEurofirst 300 Euro Supersector indices
+        * FTSEurofirst 100 Eurozone Index
+    - Industry via the FTSE Industrial Classification Benchmark (ICB).
+
+Time series interruptions are caused by: addition or removal of constituents and industry classification changes.  Index constituents are reviewed quarterly and applied at the market close of the third Friday of the month, affecting the index on the Monday morning.  ICB is reviewed at year end with some industries being discontinued.
+
+The values provided are index values, market capitalisations and dividend yields.  There are two types of index value; capital return and total return.  Capital return represents the performance of the price of the assets held while total return reinvests the income from constituents dividends paid into the index portfolio.
+
+The files are in the format:
+    FTSEIndexCode   Unique index code
+    IndexName       Name of the index
+    NumberOfConstituents Count of the index constituents
+    IndexValueUSD   Index value calculated in US dollars
+    IndexValueGBP   Index value calculated in GB sterling
+    IndexValueEuro  Index value calculated in Euro
+    IndexValueYen   Index value calculated in Japanese Yen
+    IndexValueLocal Index value calculated in local index currency (always Euro)
+    IndexTotalReturnUSD Total return index in US dollars
+    IndexTotalReturnGBP Total return index in GB sterling
+    IndexTotalReturnEuro    Total return index in Euro
+    IndexTotalReturnYen     Total return index in Japanese Yen
+    IndexTotalReturnLocal   Total return index in local index currency (always Euro)
+    IndexMarketCapUSD   Total market value of index constituents in US dollars
+    IndexMarketCapGBP   Total market value of index constituents in GB sterling
+    IndexMarketCapEuro  Total market value of index constituents in Euro
+    IndexMarketCapYen   Total market value of index constituents in Japanese Yen
+    IndexMarketCapLocal Total market value of index constituent in local currency (always Euro)
+    DividendYield   Annualised dividend yield.
+    
+Calculations:
+=============
+    Index value =  market capitalisation / divisor
+    Divisor = Previous Day Adj Market capitalisation / Prev day index value
+    Market capitalisation = sum of price * shares * free float in specified currency for current constituents
+    Previous Day Adj Market capitalisation = sum of previous price * current day shares * current free float * corporate action adjustment factor for current constituents
+    Total return index = previous day total return value * current index value / (previous index value - xd adjustment)
+    XD adjustment (Ex-dividend adjustment) = Value of dividends paid / divisor
+    
+Further details:
+===============
+Full details of:
+ Calculations: https://www.ftse.com/products/downloads/FTSE_Global_Equity_Index_Series_Guide_to_Calc.pdf
+ Industry classification benchmark: https://www.ftserussell.com/financial-data/industry-classification-benchmark-icb
+ FTSEurofirst series: https://www.ftse.com/products/indices/Eurofirst

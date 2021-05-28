@@ -1,30 +1,14 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import javax.swing.KeyStroke;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+package engine;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.text.JTextComponent;
 
-public class Fintech extends JFrame {
+public class FinTech extends JFrame {
 
-    private static final int WIDTH = 500;
+    private static final int WIDTH = 480;
     private static final int HEIGHT = 300;
     public boolean VERIFY = false;
 
@@ -32,9 +16,9 @@ public class Fintech extends JFrame {
     JTextField accountField;
 
     private class AutentificationButton implements ActionListener, KeyListener {
-        Fintech exit;
+        FinTech exit;
 
-        public AutentificationButton(Fintech chenarAuten) {
+        public AutentificationButton(FinTech chenarAuten) {
             exit = chenarAuten;
         }
 
@@ -73,7 +57,7 @@ public class Fintech extends JFrame {
         }
     }
 
-    Fintech() {
+    FinTech() {
         super();
         setTitle("Fintech Demo Solution");
         setSize(WIDTH, HEIGHT);
@@ -113,7 +97,7 @@ public class Fintech extends JFrame {
         setLocationRelativeTo(null);
         add(center, BorderLayout.CENTER);
         add(south, BorderLayout.SOUTH);
-        JLabel text = new JLabel(new ImageIcon("logo.png"));
+        JLabel text = new JLabel(new ImageIcon(this.getClass().getClassLoader().getResource("images/logo.png").getPath()));
         JButton goButton = new JButton("Autentificate");
         setFocusable(true);
         passwordField.addKeyListener(new AutentificationButton(this));
