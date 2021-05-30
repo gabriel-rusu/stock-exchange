@@ -95,16 +95,18 @@ until finished
 Add notes about how to use the system.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Swing](https://docs.oracle.com/javase/7/docs/api/javax/swing/package-summary.html) - UI Library
+- [JDK](https://www.oracle.com/ro/java/technologies/javase/javase-jdk8-downloads.html) - virtual machine for Java apps
+- [Maven](https://maven.apache.org/) - build system for Java apps
+- [Visual Studio Code](https://code.visualstudio.com/) - code editor
 
 ## ✍️ Authors <a name = "authors"></a>
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@gabriel-rusu](https://github.com/gabriel-rusu) - Java GUI that displays all the information in a meaningful way.
+- [@ParaschivaMihai](https://github.com/ParaschivaMihai) -  Matlab scripts that generates some of the graphics shown in the application.
+* [@Mrrrazzz](https://github.com/Mrrrazzz) - Matlab scripts that generates some of the graphics shown in the application.
+* [@the-sergiu](https://github.com/the-sergiu) - interpreting the data received from the Hackathon organiser **London Stock Exchange**.
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) 
-who participated in this project.
+
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 - Hat tip to anyone whose code was used
