@@ -103,8 +103,8 @@ Add notes about how to use the system.
 ## ✍️ Authors <a name = "authors"></a>
 - [@gabriel-rusu](https://github.com/gabriel-rusu) - Java GUI that displays all the information in a meaningful way.
 - [@ParaschivaMihai](https://github.com/ParaschivaMihai) -  Matlab scripts that generates some of the graphics shown in the application.
-* [@Mrrrazzz](https://github.com/Mrrrazzz) - Matlab scripts that generates some of the graphics shown in the application.
-* [@the-sergiu](https://github.com/the-sergiu) - interpreting the data received from the Hackathon organiser **London Stock Exchange**.
+- [@Mrrrazzz](https://github.com/Mrrrazzz) - Matlab scripts that generates some of the graphics shown in the application.
+- [@the-sergiu](https://github.com/the-sergiu) - interpreting the data received from the Hackathon organiser **London Stock Exchange**.
 
 
 
