@@ -11,8 +11,6 @@
 
 </div>
 
----
-
 <p align="center"> 
 An application that shows the evolution of the stock price of the automobile industry in Germany, France and Italy. The evolution is 
 determined by the data provided by the <strong>London Stock Exchange</strong>, which was the host of the Fintech category. 
