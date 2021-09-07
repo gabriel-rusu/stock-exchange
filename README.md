@@ -27,18 +27,12 @@ determined by the data provided by the <strong>London Stock Exchange</strong>, w
 - [Authors](#authors)
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
-It is useful to design and follow a specific format when writing a problem statement. While there are several options
-for doing this, the following is a simple and straightforward template often used in Business Analysis to maintain
-focus on defining the problem.
 
-- IDEAL: This section is used to describe the desired or “to be” state of the process or product. At large, this section 
-should illustrate what the expected environment would look like once the solution is implemented.
-- REALITY: This section is used to describe the current or “as is” state of the process or product. 
-- CONSEQUENCES: This section is used to describe the impacts on the business if the problem is not fixed or improved upon.
-This includes costs associated with loss of money, time, productivity, competitive advantage, and so forth.
+- __IDEAL__: The investor is able to make a good prediction of the automotive industry just looking at the data files that are provided by the financial institutions that facilitate the investment in the automotive sector.
 
-Following this format will result in a workable document that can be used to understand the problem and elicit
-requirements that will lead to a winning solution. 
+- __REALITY__: A small percentage of investors can interpret the large raw data that the financial institutions provide.
+
+- __CONSEQUENCES__: Because some investors lack the knowledge needed to interpret the raw data, the decision process usually involves guesses or wrong assumptions based on rumors
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
