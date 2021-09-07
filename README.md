@@ -22,7 +22,6 @@ determined by the data provided by the <strong>London Stock Exchange</strong>, w
 - [Idea / Solution](#idea)
 - [Dependencies / Limitations](#limitations)
 - [Future Scope](#future_scope)
-- [Usage](#usage)
 - [Technology Stack](#tech_stack)
 - [Authors](#authors)
 
@@ -70,9 +69,6 @@ If the above command succeeds you should have a new folder called target. After 
 ```
 mvn exec:java
 ```
-
-## 🎈 Usage <a name="usage"></a>
-Add notes about how to use the system.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 - [Swing](https://docs.oracle.com/javase/7/docs/api/javax/swing/package-summary.html) - UI Library
