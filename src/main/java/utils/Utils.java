@@ -29,7 +29,7 @@ public class Utils {
     }
 
     public static ImageIcon loadChart(String countryName, String months) {
-        String countryInitial = countriesInitials.get(countryName);
+        String countryInitial = countriesInitials.getOrDefault(countryName, "all");
         String monthInitial = monthsInitials.get(months);
         return loadImageIcon(CHARTS_PATH + countryInitial + monthInitial + PLOT_FORMAT);
     }

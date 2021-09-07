@@ -7,95 +7,34 @@ import java.awt.event.ActionListener;
 
 import utils.*;
 
-
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPanel;
 
-public class GUI implements ActionListener, Runnable{
+import constants.Action;
+
+public class GUI implements ActionListener, Runnable {
 
 	private JFrame frmFinancialAnalysis;
-	String tara;
-	String luni;
-	JComboBox<String> comboBox_1;
-	JComboBox<String> comboBox_2;
+	JComboBox<String> countryDropdown;
+	JComboBox<String> monthsDropdown;
 	JPanel panel;
 	JLabel grafic;
-	
-
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String action = e.getActionCommand();
 
-		if(action.equals("Plot")) {
-			update(Utils.loadChart(comboBox_1.getSelectedItem().toString(), comboBox_2.getSelectedItem().toString()));
+		if (action.equals(Action.PLOT.v())) {
+			update(Utils.loadChart(countryDropdown.getSelectedItem().toString(),
+					monthsDropdown.getSelectedItem().toString()));
+		} else if (action.equals(Action.COMPARE.v())) {
+			update(Utils.loadChart(null, monthsDropdown.getSelectedItem().toString()));
 		}
-
-
-
-
-		// if (action.equals("Plot")) {
-		// 	if (comboBox_1.getSelectedItem().toString().equals("Italy")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
-		// 		update(Utils.loadImageIcon("charts/ity1m.jpg"));
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
-		// 		update(Utils.loadImageIcon("charts/ity3m.jpg"));
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
-		// 		update("charts/ity6m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
-		// 		update("charts/ity9m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
-		// 		update("charts/ity12m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
-		// 		update("charts/ger1m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
-		// 		update("charts/ger3m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
-		// 		update("charts/ger6m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
-		// 		update("charts/ger9m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
-		// 		update("charts/ger12m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
-		// 		update("charts/fra1m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
-		// 		update("charts/fra3m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
-		// 		update("charts/fra6m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
-		// 		update("charts/fra9m.jpg");
-		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
-		// 			&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
-		// 		update("charts/fra12m.jpg");
-		// 	}
-		 if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("1 month")) {
-			update("charts/all1m.jpg");
-		} else if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("3 months")) {
-			update("charts/all3m.jpg");
-		} else if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("6 months")) {
-			update("charts/all6m.jpg");
-		} else if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("12 months")) {
-			update("charts/all12m.jpg");
-		}
-
 	}
 
 	@Override
 	public void run() {
-		
+
 	}
 
 	public void update(ImageIcon icon) {
@@ -161,28 +100,30 @@ public class GUI implements ActionListener, Runnable{
 		lblCountry.setBounds(44, 299, 78, 22);
 		frmFinancialAnalysis.getContentPane().add(lblCountry);
 
-		comboBox_1 = new JComboBox<>();
-		comboBox_1.setFont(new Font("Garamond", Font.PLAIN, 18));
-		comboBox_1.setModel(new DefaultComboBoxModel<>(new String[] { "France", "Germany", "Italy" }));
-		comboBox_1.setBounds(44, 334, 115, 22);
-		frmFinancialAnalysis.getContentPane().add(comboBox_1);
-		comboBox_1.getSelectedItem().toString();
+		countryDropdown = new JComboBox<>();
+		countryDropdown.setFont(new Font("Garamond", Font.PLAIN, 18));
+		countryDropdown.setModel(new DefaultComboBoxModel<>(new String[] { "France", "Germany", "Italy" }));
+		countryDropdown.setBounds(44, 334, 115, 22);
+		frmFinancialAnalysis.getContentPane().add(countryDropdown);
+		countryDropdown.getSelectedItem().toString();
 
 		JLabel lblOverWhatPeriod = new JLabel("Over what period of time");
 		lblOverWhatPeriod.setFont(new Font("Garamond", Font.PLAIN, 20));
 		lblOverWhatPeriod.setBounds(44, 369, 217, 22);
 		frmFinancialAnalysis.getContentPane().add(lblOverWhatPeriod);
 
-		comboBox_2 = new JComboBox<>();
-		comboBox_2.setFont(new Font("Garamond", Font.PLAIN, 18));
-		comboBox_2.setModel(new DefaultComboBoxModel<>(new String[] { "1 month", "3 months", "6 months", "12 months" }));
-		comboBox_2.setBounds(44, 404, 115, 22);
-		frmFinancialAnalysis.getContentPane().add(comboBox_2);
+		monthsDropdown = new JComboBox<>();
+		monthsDropdown.setFont(new Font("Garamond", Font.PLAIN, 18));
+		monthsDropdown
+				.setModel(new DefaultComboBoxModel<>(new String[] { "1 month", "3 months", "6 months", "12 months" }));
+		monthsDropdown.setBounds(44, 404, 115, 22);
+		frmFinancialAnalysis.getContentPane().add(monthsDropdown);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(26, 13, 207, 203);
 		frmFinancialAnalysis.getContentPane().add(panel_1);
-		JLabel logo = new JLabel(new ImageIcon(this.getClass().getClassLoader().getResource("images/logo.png").getPath()));
+		JLabel logo = new JLabel(
+				new ImageIcon(this.getClass().getClassLoader().getResource("images/logo.png").getPath()));
 		panel_1.add(logo);
 
 		JButton btnNewButton = new JButton("Plot");
