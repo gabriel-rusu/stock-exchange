@@ -5,6 +5,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import utils.*;
+
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPanel;
 
@@ -17,65 +20,75 @@ public class GUI implements ActionListener, Runnable{
 	JComboBox<String> comboBox_2;
 	JPanel panel;
 	JLabel grafic;
+	
+
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String action = e.getActionCommand();
-		if (action.equals("Plot")) {
-			if (comboBox_1.getSelectedItem().toString().equals("Italy")
-					&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
-				update(this.getClass().getClassLoader().getResource("charts/ity1m.jpg").getPath());
-			} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
-					&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
-				update("Resources/ity3m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
-					&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
-				update("Resources/ity6m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
-					&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
-				update("Resources/ity9m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
-					&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
-				update("Resources/ity12m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-					&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
-				update("Resources/ger1m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-					&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
-				update("Resources/ger3m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-					&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
-				update("Resources/ger6m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-					&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
-				update("Resources/ger9m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
-					&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
-				update("Resources/ger12m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("France")
-					&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
-				update("Resources/fra1m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("France")
-					&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
-				update("Resources/fra3m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("France")
-					&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
-				update("Resources/fra6m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("France")
-					&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
-				update("Resources/fra9m.jpg");
-			} else if (comboBox_1.getSelectedItem().toString().equals("France")
-					&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
-				update("Resources/fra12m.jpg");
-			}
-		} else if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("1 month")) {
-			update("Resources/all1m.jpg");
+
+		if(action.equals("Plot")) {
+			update(Utils.loadChart(comboBox_1.getSelectedItem().toString(), comboBox_2.getSelectedItem().toString()));
+		}
+
+
+
+
+		// if (action.equals("Plot")) {
+		// 	if (comboBox_1.getSelectedItem().toString().equals("Italy")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
+		// 		update(Utils.loadImageIcon("charts/ity1m.jpg"));
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
+		// 		update(Utils.loadImageIcon("charts/ity3m.jpg"));
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
+		// 		update("charts/ity6m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
+		// 		update("charts/ity9m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Italy")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
+		// 		update("charts/ity12m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
+		// 		update("charts/ger1m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
+		// 		update("charts/ger3m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
+		// 		update("charts/ger6m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
+		// 		update("charts/ger9m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("Germany")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
+		// 		update("charts/ger12m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("1 month")) {
+		// 		update("charts/fra1m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("3 months")) {
+		// 		update("charts/fra3m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("6 months")) {
+		// 		update("charts/fra6m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("9 months")) {
+		// 		update("charts/fra9m.jpg");
+		// 	} else if (comboBox_1.getSelectedItem().toString().equals("France")
+		// 			&& comboBox_2.getSelectedItem().toString().equals("12 months")) {
+		// 		update("charts/fra12m.jpg");
+		// 	}
+		 if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("1 month")) {
+			update("charts/all1m.jpg");
 		} else if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("3 months")) {
-			update("Resources/all3m.jpg");
+			update("charts/all3m.jpg");
 		} else if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("6 months")) {
-			update("Resources/all6m.jpg");
+			update("charts/all6m.jpg");
 		} else if (action.equals("Compare all") && comboBox_2.getSelectedItem().toString().equals("12 months")) {
-			update("Resources/all12m.jpg");
+			update("charts/all12m.jpg");
 		}
 
 	}
@@ -83,6 +96,12 @@ public class GUI implements ActionListener, Runnable{
 	@Override
 	public void run() {
 		
+	}
+
+	public void update(ImageIcon icon) {
+		grafic.setIcon(icon);
+		grafic.validate();
+		panel.validate();
 	}
 
 	public void update(String FileName) {

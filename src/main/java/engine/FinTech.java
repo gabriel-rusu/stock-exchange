@@ -5,12 +5,13 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.text.JTextComponent;
+import utils.Utils;
 
 public class FinTech extends JFrame {
 
     private static final int WIDTH = 480;
     private static final int HEIGHT = 300;
-    public boolean VERIFY = false;
+    public static boolean VERIFY = false;
 
     JPasswordField passwordField;
     JTextField accountField;
@@ -70,7 +71,7 @@ public class FinTech extends JFrame {
         north.add(northLabel);
         JPanel center = new JPanel(new FlowLayout());
         JPanel centerL = new JPanel(new FlowLayout());
-        JLabel centerJLabelL = new JLabel(new ImageIcon("logo1.png"));
+        JLabel centerJLabelL = new JLabel(Utils.loadImageIcon("images/logo.png"));
         centerL.add(centerJLabelL);
         JPanel centerR = new JPanel(new BorderLayout());
         JLabel centerJLabelR1 = new JLabel("Password:");
@@ -97,11 +98,10 @@ public class FinTech extends JFrame {
         setLocationRelativeTo(null);
         add(center, BorderLayout.CENTER);
         add(south, BorderLayout.SOUTH);
-        JLabel text = new JLabel(new ImageIcon(this.getClass().getClassLoader().getResource("images/logo.png").getPath()));
+        JLabel text = new JLabel(Utils.loadImageIcon("images/logo.png"));
         JButton goButton = new JButton("Autentificate");
         setFocusable(true);
         passwordField.addKeyListener(new AutentificationButton(this));
-        // goButton.setBackground(Color.WHITE);
         goButton.addActionListener(new AutentificationButton(this));
         centerR.add(goButton, BorderLayout.SOUTH);
         revalidate();
