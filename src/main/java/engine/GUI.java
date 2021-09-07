@@ -18,7 +18,7 @@ public class GUI implements ActionListener, Runnable {
 	JComboBox<String> countryDropdown;
 	JComboBox<String> monthsDropdown;
 	JPanel panel;
-	JLabel grafic;
+	JLabel plotArea;
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -38,14 +38,14 @@ public class GUI implements ActionListener, Runnable {
 	}
 
 	public void update(ImageIcon icon) {
-		grafic.setIcon(icon);
-		grafic.validate();
+		plotArea.setIcon(icon);
+		plotArea.validate();
 		panel.validate();
 	}
 
 	public void update(String FileName) {
-		grafic.setIcon(new ImageIcon(FileName));
-		grafic.validate();
+		plotArea.setIcon(new ImageIcon(FileName));
+		plotArea.validate();
 		panel.validate();
 	}
 
@@ -92,8 +92,8 @@ public class GUI implements ActionListener, Runnable {
 		panel.setBackground(Color.WHITE);
 		panel.setBounds(273, 13, 700, 525);
 		frmFinancialAnalysis.getContentPane().add(panel);
-		grafic = new JLabel(new ImageIcon("Resources/fra1m.jpg"));
-		panel.add(grafic);
+		plotArea = new JLabel(new ImageIcon("Resources/fra1m.jpg"));
+		panel.add(plotArea);
 
 		JLabel lblCountry = new JLabel("Country");
 		lblCountry.setFont(new Font("Garamond", Font.PLAIN, 20));

@@ -22,12 +22,9 @@ determined by the data provided by the <strong>London Stock Exchange</strong>, w
 - [Idea / Solution](#idea)
 - [Dependencies / Limitations](#limitations)
 - [Future Scope](#future_scope)
-- [Setting up a local environment](#getting_started)
 - [Usage](#usage)
 - [Technology Stack](#tech_stack)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgments)
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 It is useful to design and follow a specific format when writing a problem statement. While there are several options
@@ -44,49 +41,41 @@ Following this format will result in a workable document that can be used to und
 requirements that will lead to a winning solution. 
 
 ## 💡 Idea / Solution <a name = "idea"></a>
-This section is used to describe potential solutions. 
 
-Once the ideal, reality, and consequences sections have been 
-completed, and understood, it becomes easier to provide a solution for solving the problem.
+The solution consisted of a financial application that can display the evolution of automotive indexes in the most important 3 european countries. The app lets the user select the time frame and the country in which he wants to invest and then it will display a chart showing the performance of the automotive sector based on the user selection.
 
 ## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
-- What are the dependencies of your project?
-- Describe each limitation in detailed but concise terms
-- Explain why each limitation exists
-- Provide the reasons why each limitation could not be overcome using the method(s) chosen to acquire.
-- Assess the impact of each limitation in relation to the overall findings and conclusions of your project, and if 
-appropriate, describe how these limitations could point to the need for further research.
+- Currently the app can display only the performance of the automotive industry 
+- The performance can be traced back at maximum to 12 months
+- It allows the selection of only 3 countries
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 Write about what you could not develop during the course of the Hackathon; and about what your project can achieve 
 in the future.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
-These instructions will get you a copy of the project up and running on your local machine for development 
-and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
+To check if you already have the requirements
+run the following command(cmd/linux terminal):
+- for __Java__: ``` java --version```
+- for __Maven__: ``` mvn --version ```
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
+If you don't have the requirements above mentioned you should follow the following links to install them:
+- [Maven](https://maven.apache.org/)
+- [Java JDK](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html)
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
+To run the app you should follow the next steps, after installing the requirements. In the root folder of the project type:
 
 ```
-Give the example
+mvn install
 ```
 
-And repeat
-
+If the above command succeeds you should have a new folder called target. After this to run the app you should type:
 ```
-until finished
+mvn exec:java
 ```
 
 ## 🎈 Usage <a name="usage"></a>
@@ -104,9 +93,3 @@ Add notes about how to use the system.
 - [@Mrrrazzz](https://github.com/Mrrrazzz) - Matlab scripts that generates some of the graphics shown in the application.
 - [@the-sergiu](https://github.com/the-sergiu) - interpreting the data received from the Hackathon organiser **London Stock Exchange**.
 
-
-
-## 🎉 Acknowledgments <a name = "acknowledgments"></a>
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
