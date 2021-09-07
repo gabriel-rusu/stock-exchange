@@ -44,8 +44,7 @@ The solution consisted of a financial application that can display the evolution
 - It allows the selection of only 3 countries
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
-Write about what you could not develop during the course of the Hackathon; and about what your project can achieve 
-in the future.
+In the future, the app will be extended to include more financial sectors and allow for even granular control over the time frame selections.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
