@@ -39,7 +39,7 @@ The solution consisted of a financial application that can display the evolution
 
 ## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
 - Currently the app can display only the performance of the automotive industry 
-- The performance can be traced back at maximum to 12 months
+- The performance can be traced back a maximum of 12 months
 - It allows the selection of only 3 countries
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
